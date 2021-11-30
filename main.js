@@ -36,3 +36,5 @@ var loop = (dom) => {
     buyProducts(dom)
     goAgain(dom)
 }
+
+loop()
