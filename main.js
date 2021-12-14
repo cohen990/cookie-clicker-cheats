@@ -1,21 +1,22 @@
 var looping = true
 
 var clickBigCookie = (dom) => {
-    dom("#bigCookie").click()
+    dom("#bigCookie")[0].click()
 }
 
 var clickGoldenCookie = (dom) => {
-    var goldenCookie = dom(".shimmer")
+    var goldenCookie = dom(".shimmer")[0]
     goldenCookie && goldenCookie.click()
 }
 
 var buyUpgrades = (dom) => {
-    var upgrade = dom(".storeSection .upgrade.enabled")
+    var upgrade = dom(".storeSection .upgrade.enabled")[0]
     upgrade && upgrade.click()
 }
 
 var buyProducts = (dom) => {
-    var product = dom(".product.unlocked.enabled")
+    var products = dom(".product.unlocked.enabled")
+    var product = products[products.length-1]
     product && product.click()
 }
 
@@ -29,7 +30,7 @@ var goAgain = (dom) => {
 }
 
 var loop = (dom) => {
-    dom = dom || $
+    dom = dom || $$
     clickBigCookie(dom)
     clickGoldenCookie(dom)
     buyUpgrades(dom)
